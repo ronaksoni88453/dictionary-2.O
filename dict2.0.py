@@ -1,12 +1,14 @@
+from turtle import Canvas
 
 from tkinter import *
-
+from PIL import ImageTk, Image
 import tkinter.messagebox
-root=Tk()
-canvas=Canvas(root,width=1000,height=1200)
+root = Tk()
+canvas = Canvas(root, width=1920, height=1000)
 root.title("Complete Dictionary of SEO")
-image = ImageTk.PhotoImage(Image.open("ddd.jpg"))
-canvas.create_image(0,0,anchor=NW,image=image)
+image = ImageTk.PhotoImage(Image.open("bgimage15.jpg"))
+canvas.create_image(0, 0, anchor=NW, image=image)
+
 
 
 
@@ -626,5 +628,5 @@ but27=Button(root,padx=2,pady=2,text='Y',command=Y,width=3,height=0,bg='green',f
 but27.place(x=600,y=585)
 but28=Button(root,padx=2,pady=2,text='Z',command=Z,width=3,height=0,bg='green',font=('none 15 bold'))
 but28.place(x=600,y=630)
-
+canvas.pack()
 root.mainloop()
